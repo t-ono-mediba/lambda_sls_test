@@ -84,3 +84,4 @@ plugins:
   - serverless-mocha-plugin
   - serverless-plugin-lambda-dead-letter
   - serverless-dynamodb-local
+  - serverless-webpack
