@@ -1,0 +1,29 @@
+{
+  "name": "lambda_sls_test",
+  "version": "1.0.0",
+  "description": "hogehoge",
+  "scripts": {
+    "sandbox:start:s3": "s3rver -p 3000 -d ./test/s3/"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.2.0",
+    "eslint-config-airbnb": "^15.0.2",
+    "eslint-plugin-import": "^2.7.0",
+    "jsdoc": "^3.5.3",
+    "lambda-local": "^1.4.2",
+    "npm-run-all": "^4.0.2",
+    "s3rver": "^1.0.3",
+    "serverless": "^1.18.0",
+    "serverless-mocha-plugin": "^1.4.1"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.82.0",
+    "bluebird": "^3.5.0",
+    "config": "^1.26.1",
+    "rimraf": "^2.6.1",
+    "serverless-dynamodb-local": "^0.2.22",
+    "serverless-plugin-lambda-dead-letter": "^1.2.1"
+  }
+}
