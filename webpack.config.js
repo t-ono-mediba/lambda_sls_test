@@ -1,7 +1,8 @@
 var path = require('path');
 
 module.exports = {
-  entry:  './handler.ts',
+//  entry:  './handler.ts',
+  entry:  './fuga.ts',
   target: 'node',
 
   module: {
@@ -25,6 +26,7 @@ module.exports = {
   output: {
     libraryTarget: 'commonjs',
     path:          path.join(__dirname, '.webpack'),
-    filename:      'handler.js',
+//    filename:      'handler.js',
+    filename:      'fuga.js',
   },
 };

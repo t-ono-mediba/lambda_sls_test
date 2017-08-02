@@ -20,20 +20,6 @@ provider:
       Resource: "*"
 
 functions:
-  # 地震速報枠
-  disposeQuakeJson:
-    handler: handler.dispose
-    memorySize: 128
-    timeout: 10
-    events:
-      - s3:
-          bucket: '${self:custom.srcBacketName}'
-          event: s3:ObjectCreated:Put
-          rules:
-            - prefix: jsonp/
-            - suffix: .jsonp
-#    onError: arn:aws:sns:${self:provider.region}:XXXXXX:sns-topic
-
   # 地震詳細
   registQuakeDetail:
     handler: handler.regist
@@ -44,7 +30,7 @@ functions:
           bucket: '${self:custom.srcBacketName}'
           event: s3:ObjectCreated:Put
           rules:
-            - prefix: json/
+            - prefix: quake/
             - suffix: .json
     environment:
       stage: ${self:custom.stage}
