@@ -30,7 +30,7 @@
 
     "completed-docs": true,
     "no-any": false,
-    "no-magic-numbers": true,
+    "no-magic-numbers": false,
     "no-non-null-assertion": false,
     "no-null-keyword": false,
     "no-require-imports": false,
@@ -42,12 +42,15 @@
     "strict-type-predicates": false,
     "triple-equals": false,
     "typedef": false,
-
-    "ban": [true,
+    "no-trailing-whitespace": false,
+    "no-default-export": false,
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
+    "ban": [ 
+      true,
       ["describe", "only"],
       ["it", "only"]
     ],
-
     "interface-name": false,
     "file-header": [false,
       "Copyright \\d{4} Palantir Technologies, Inc."
@@ -59,9 +62,7 @@
       "static-before-instance",
       "variables-before-functions"
     ],
-    "no-console": {
-      "options": ["log"]
-    },
+    "no-console": [false, "log", "error"],
     "no-switch-case-fall-through": true,
     "strict-boolean-expressions": [true, "allow-boolean-or-undefined"],
     "switch-default": false,
